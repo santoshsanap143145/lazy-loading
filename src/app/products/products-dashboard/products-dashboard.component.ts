@@ -7,7 +7,6 @@ import { Icategory } from '../models/category.model';
   styleUrls: ['./products-dashboard.component.scss'],
 })
 export class ProductsDashboardComponent implements OnInit {
-  arr = [1, 2, 4, 5, 6, 4, 2];
   caragaryArr: Array<Icategory> = [
   {
     category: 'Books and Toys',

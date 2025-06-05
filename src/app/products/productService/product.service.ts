@@ -6,15 +6,13 @@ import { Iproduct } from '../models/product.model';
 
 @Injectable()
 export class ProductService {
- BASE_URL: string = `${environment.BASE_URL}`;
-PRODUCT_FILTER_URL: string = `${this.BASE_URL}/products/filter`;
+  BASE_URL: string = `${environment.BASE_URL}`;
+  PRODUCT_FILTER_URL: string = `${this.BASE_URL}/products/filter`;
 
-constructor(private _http: HttpClient) {}
+  constructor(private _http: HttpClient) {}
 
-
-getProductsByCategory(category: string): Observable<Iproduct[]> {
-  const url = `${this.PRODUCT_FILTER_URL}?category=${category}`;
-  return this._http.get<Iproduct[]>(url);
-}
-
+  getProductsByCategory(category: string): Observable<Iproduct[]> {
+    const url = `${this.PRODUCT_FILTER_URL}?category=${category}`;
+    return this._http.get<Iproduct[]>(url);
+  }
 }
