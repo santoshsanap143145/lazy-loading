@@ -21,12 +21,13 @@ export class ProdCategoriesComponent implements OnInit {
     this._route.queryParamMap.subscribe(params => {
       this.category = params.get('category')!;
       console.log(this.category);
-    });
-
-    this._productService.getProductsByCategory(this.category).subscribe(data => {
+      this._productService.getProductsByCategory(this.category).subscribe(data => {
       this.productsArray = data
       console.log(this.productsArray);
       
     })
+    });
+
+    
   }
 }
